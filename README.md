@@ -66,3 +66,110 @@ HomeBase is a one-stop solution for anyone looking to discover, list, and manage
 - **Priyesh:** Search Recommendations and Property Document Upload
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/DIHvCS29)
+
+### Mermaid Code:
+
+```mermaid
+---
+title: Real Estate Management System Model
+---
+classDiagram
+
+    class User{
+        +String userId
+        +String username
+        +String email
+        +String password
+        +register()
+        +login()
+        +updateProfile()
+    }
+
+    class Property{
+        +String postId
+        +String title
+        +String description
+        +double price
+        +String location
+        +String propertyType
+        +postProperty()
+        +updateProperty()
+        +removeProperty()
+    }
+
+    class Listing{
+        +String listingId
+        +User owner
+        +Property property
+        +LocalDateTime createdDate
+        +List~Inquiry~ inquiries
+        +addInquiry()
+        +updateListing()
+        +removeListing()
+    }
+
+    class Transaction{
+        +String transactionId
+        +User buyer
+        +Property property
+        +String transactionType
+        +LocalDateTime transactionDate
+        +double amount
+        +createTransaction()
+        +cancelTransaction()
+    }
+
+    class Inquiry{
+        +String inquiryId
+        +User user
+        +Listing listing
+        +String message
+        +LocalDateTime inquiryDate
+        +createInquiry()
+        +updateInquiry()
+        +deleteInquiry()
+    }
+
+    class PropertyType{
+        <<enumeration>>
+        RENT,
+        SALE
+    }
+
+    class TransactionType{
+        <<enumeration>>
+        BUY,
+        RENT
+    }
+
+    class SearchService{
+        +searchProperties(location, priceRange, propertyType)
+    }
+
+    class AuthService{
+        +login(email, password)
+        +register(username, email, password)
+    }
+
+    class PaymentService{
+        +processPayment(userId, amount)
+        +refundPayment(transactionId)
+    }
+
+    %% Relationships
+    User "1" --> "0..*" Listing : creates
+    Listing "1" --> "1" Property : represents
+    Listing "0..*" --> "0..*" Inquiry : receives
+    Transaction "1" --> "1" Property : involved in
+    Transaction "1" --> "1" User : involves
+    Inquiry "1" --> "1" Listing : on
+    Inquiry "1" --> "1" User : made by
+
+    %% Utility Relationships
+    User --> AuthService : uses
+    Listing --> SearchService : uses for discovery
+    Transaction --> PaymentService : handles
+
+    %% Enums
+    Property --> PropertyType
+    Transaction --> TransactionType
