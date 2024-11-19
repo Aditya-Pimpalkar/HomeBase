@@ -21,6 +21,7 @@ const deleteById = async (id) => {
     return Inquiries.findByIdAndDelete(id);
 };
 
+
 const patchById = async (id, updateData) => {
     return Inquiries.findByIdAndUpdate(id, updateData, { new: true });
 };
