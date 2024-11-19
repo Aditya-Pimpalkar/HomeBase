@@ -5,16 +5,16 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/users
+  url: http://localhost:3002/user
   body: json
   auth: none
 }
 
 body:json {
   {
-    "userId": "",
-    "firstName": "",
-    "lastName": "",
-    "email": ""
+    "userId": "1",
+    "firstName": "Priyesh",
+    "lastName": "Modi",
+    "email": "priyesh@xyz.com"
   }
 }
