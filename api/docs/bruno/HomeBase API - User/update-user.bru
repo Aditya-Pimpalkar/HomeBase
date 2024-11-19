@@ -1,0 +1,15 @@
+meta {
+  name: update-user
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/users/:userId
+  body: json
+  auth: none
+}
+
+params:path {
+  userId: 
+}
