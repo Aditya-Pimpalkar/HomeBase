@@ -1,0 +1,15 @@
+meta {
+  name: update-inquiry
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/inquiries/:inquiryId
+  body: json
+  auth: none
+}
+
+params:path {
+  inquiryId: 
+}
