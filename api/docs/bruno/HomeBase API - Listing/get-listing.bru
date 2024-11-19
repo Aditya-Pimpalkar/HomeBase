@@ -1,0 +1,15 @@
+meta {
+  name: get-listing
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/listings/:listingId
+  body: none
+  auth: none
+}
+
+params:path {
+  listingId: 
+}

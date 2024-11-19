@@ -1,0 +1,15 @@
+meta {
+  name: patch-listing
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/listings/:listingId
+  body: json
+  auth: none
+}
+
+params:path {
+  listingId: 
+}

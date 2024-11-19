@@ -1,0 +1,22 @@
+meta {
+  name: create-listing
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/listings
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "listingId": "",
+    "propertyId": "",
+    "title": "",
+    "price": "",
+    "description": "",
+    "status": ""
+  }
+}
