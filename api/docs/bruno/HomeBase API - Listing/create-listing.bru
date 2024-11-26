@@ -5,18 +5,18 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/listings
+  url: http://localhost:3002/listing
   body: json
   auth: none
 }
 
 body:json {
   {
-    "listingId": "",
-    "propertyId": "",
-    "title": "",
-    "price": "",
-    "description": "",
-    "status": ""
+    "listingId": "1",
+    "propertyId": "20",
+    "title": "Newdemo",
+    "price": "10000",
+    "description": "Newdemo",
+    "status": "Rent"
   }
 }

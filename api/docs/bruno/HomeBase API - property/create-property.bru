@@ -5,18 +5,18 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/properties
+  url: http://localhost:3002/property
   body: json
   auth: none
 }
 
 body:json {
   {
-    "propertyId": "",
-    "address": "",
-    "city": "",
-    "price": "",
-    "propertyType": "",
-    "description": ""
+    "propertyId": "7",
+    "address": "newdemo",
+    "city": "demo",
+    "price": "100",
+    "propertyType": "rent",
+    "description": "demo"
   }
 }
