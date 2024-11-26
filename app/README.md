@@ -24,6 +24,7 @@ Ensure you have the following installed:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/real-estate-frontend.git
+   
    cd real-estate-frontend
 
 2. Install the dependencies:
@@ -33,12 +34,14 @@ Ensure you have the following installed:
 3. Start the development server:
     ```bash
     npm start
-    This will run the application on http://localhost:3000.
+    
+This will run the application on http://localhost:3000.
 
 4. To build the project for production:
     ```bash
     npm run build
-    This will create an optimized production build in the build/ directory.
+    
+This will create an optimized production build in the build/ directory.
 
 ## Technologies Used
 
