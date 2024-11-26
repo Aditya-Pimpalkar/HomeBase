@@ -35,13 +35,13 @@ Ensure you have the following installed:
     ```bash
     npm start
     
-This will run the application on http://localhost:3000.
+    This will run the application on http://localhost:3000.
 
 4. To build the project for production:
     ```bash
     npm run build
     
-This will create an optimized production build in the build/ directory.
+    This will create an optimized production build in the build/ directory.
 
 ## Technologies Used
 
