@@ -27,14 +27,17 @@ Ensure you have the following installed:
    cd real-estate-frontend
 
 2. Install the dependencies:
-    ```npm install
+    ```bash
+    npm install
 
 3. Start the development server:
-    ```npm start
+    ```bash
+    npm start
     This will run the application on http://localhost:3000.
 
 4. To build the project for production:
-    ```npm run build
+    ```bash
+    npm run build
     This will create an optimized production build in the build/ directory.
 
 ## Technologies Used
