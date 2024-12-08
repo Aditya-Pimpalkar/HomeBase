@@ -2,6 +2,9 @@
 
 HomeBase is an innovative real estate platform designed to streamline property transactions, making it easier for buyers and sellers to connect, communicate, and complete secure transactions. The website offers a range of features to enhance the property search and listing experience, providing users with a user-friendly interface and powerful tools.
 
+
+## Link for Presentation: Web dev presentation-ByteMe-Meeting Recording 1.mp4
+
 ## Project Description
 
 HomeBase simplifies the process of buying, renting, and selling properties by offering a comprehensive platform for managing property listings and inquiries. Key features include:
@@ -67,72 +70,8 @@ HomeBase is a one-stop solution for anyone looking to discover, list, and manage
 
 
 
-### REST API Resources
 
-User Resource
 
-POST /users/register - Register a new user.
-POST /users/login - Authenticate a user.
-GET /users/{userId} - Retrieve user details.
-PUT /users/{userId} - Update user profile.
-DELETE /users/{userId} - Delete user profile.
-POST /users/{userId}/logout - Log out the user.
-GET /users/{userId}/favorites - Get user’s favorite properties.
-POST /users/{userId}/favorites - Add a property to user’s favorites.
-
-Property Resource
-
-POST /properties - Create a new property listing.
-GET /properties - Get a list of all properties (supports filters).
-GET /properties/{propertyId} - Get details of a specific property.
-PUT /properties/{propertyId} - Update details of a property.
-DELETE /properties/{propertyId} - Delete a property listing.
-GET /properties/{propertyId}/amenities - Retrieve amenities for a property.
-POST /properties/{propertyId}/amenities - Add amenities to a property.
-
-Listing Resource
-
-POST /listings - Create a new listing for a property.
-GET /listings - Retrieve a list of all listings with filters.
-GET /listings/{listingId} - Get details of a specific listing.
-PUT /listings/{listingId} - Update listing details.
-DELETE /listings/{listingId} - Remove a listing.
-POST /listings/{listingId}/feature - Mark a listing as featured.
-
-Search Resource
-
-GET /search - Search for properties with optional filters like city, state, type, minPrice, and maxPrice.
-Inquiry Resource
-POST /inquiries - Create a new inquiry for a listing.
-GET /inquiries/{inquiryId} - Retrieve details of a specific inquiry.
-PUT /inquiries/{inquiryId} - Update an inquiry.
-DELETE /inquiries/{inquiryId} - Delete an inquiry.
-POST /inquiries/{inquiryId}/response - Respond to an inquiry.
-
-Transaction Resource
-
-POST /transactions - Create a transaction for buying or renting a property.
-GET /transactions/{transactionId} - Retrieve details of a specific transaction.
-PUT /transactions/{transactionId}/cancel - Cancel a transaction.
-GET /users/{userId}/transactions - Retrieve a list of user’s transactions.
-
-Document Resource
-
-POST /properties/{propertyId}/documents - Upload a document for a property.
-GET /properties/{propertyId}/documents - Get all documents for a property.
-GET /documents/{documentId} - Get details of a specific document.
-DELETE /documents/{documentId} - Delete a document.
-
-Review Resource
-
-POST /properties/{propertyId}/reviews - Add a review for a property.
-GET /properties/{propertyId}/reviews - Get all reviews for a property.
-DELETE /reviews/{reviewId} - Delete a review.
-
-Payment Service
-
-POST /payments/process - Process a payment for a transaction.
-POST /payments/refund/{transactionId} - Refund a payment for a transaction.
 
 ### Mermaid Code:
 
